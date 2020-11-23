@@ -1,0 +1,194 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+
+}
+#title{
+  background-color: #222831;
+  color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+
+}
+.container-fluid{
+  padding: 1% 7% 1%;
+
+
+}
+.navbar{
+  padding: 0 0 0;
+
+}
+.nav-item{
+  padding: 0px 18px;
+}
+.nav-link{
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.navbar-brand{
+
+  font-size: 2.5rem;
+}
+
+.block{
+
+  height: 800px;
+  width: 100%;
+  background-image: url("https://www.myfitnesschat.com/wp-content/uploads/2019/03/pexels-photo-1509428.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.punchline{
+  font-size: 2rem;
+  padding-top: 225px;
+  padding-left: 7%;
+
+
+}
+.texts{
+  height: 215px;
+  width: 100%;
+  background-color: #222831;
+
+}
+p{
+  color: white;
+  text-align: center;
+  padding: 7%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 1.2rem;
+}
+
+@media (max-width:1028px) {
+
+  p{
+    font-size: 0.9rem;
+  }
+  .texts{
+    height: 230px;
+  }
+  .block{
+    height:500px;
+  }
+
+}
+
+#features{
+  padding: 2% 9%;
+  background-color: #fff;
+  position: relative;
+  z-index: 0;
+}
+
+
+.features-box h3{
+  font-size: 1.5rem;
+
+
+}
+
+.features-box p{
+  color: #8f8f8f;
+  font-weight: 100;
+
+}
+.features-box{
+  padding: 5%;
+  text-align: center;
+}
+
+
+#ourproducts{
+
+  text-align: center;
+  background-color: #222831;
+  color: #fff;
+}
+.carousel-item{
+    padding: 4% 6%;
+}
+#ourproducts h2{
+
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.products-image{
+  width: 25%;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.client-p{
+  font-size: 2rem;
+    color: black;
+}
+
+#press{
+  text-align: center;
+  background-color: #ffffff  ;
+  padding-bottom: 3%;
+
+}
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+
+
+#footer{
+  text-align: center;
+  background-color: #222831;
+
+  padding: 7% 7%;
+  height: 280px;
+}
+.f-icons{
+  margin: 2% 3%;
+  color: white;
+
+}
+#footer p{
+  font-weight: lighter;
+
+}
+
+.footer-text{
+  color:white;
+}
+
+
+
+
+.product{
+  display: flex;
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 20px;
+  border-bottom: 1px solid lightgrey;
+  opacity: 1;
+  cursor: pointer;
+}
+.product:hover{
+  opacity: 0.8;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.heart{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
