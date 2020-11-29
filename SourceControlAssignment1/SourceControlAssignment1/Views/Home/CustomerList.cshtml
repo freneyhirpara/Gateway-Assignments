@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HelloMVC.Models.Customer>
+
+@{
+    ViewBag.Title = "Customer List";
+}
+
+<h2>Customer List</h2>
+
+<p>
+    @Html.ActionLink("Add Customer", "AddCustomer")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PurchaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditCardNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PurchaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditCardNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditCustomer", new { id=item.Id }) |
+            @Html.ActionLink("Details", "ViewCustomer", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteCustomer", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
