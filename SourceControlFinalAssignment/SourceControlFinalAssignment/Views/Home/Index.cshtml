@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    p{
+        font-size:1.5rem;
+        font-weight:600;
+    }
+</style>
+ 
+            
+<div>
+    @if (Session["FullName"] != null)
+    {
+        <h2>User Details</h2>
+        <hr />
+        <br />
+        <img style="height:120px; width:120px;" src="~/Content/UserImages/@Session["Image"]" />
+    <br /><br />
+        <p>Name:           @Session["FullName"].ToString()</p>
+        <p>Email:          @Session["Email"].ToString()</p>
+        <p>Age:            @Session["Age"].ToString()</p>
+        <p>ContactNumber:  @Session["ContactNumber"].ToString()</p>
+        <p>Country:        @Session["Country"].ToString()</p>
+        <p>Date of Birth:  @Session["DateOfBirth"].ToString()</p>
+
+        <br />
+        <a href="@Url.Action("Logout","Home")" class="btn btn-primary">Logout</a>
+    }
+    </div>

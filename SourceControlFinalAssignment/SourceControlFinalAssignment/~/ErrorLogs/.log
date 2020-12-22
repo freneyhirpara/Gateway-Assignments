@@ -1,0 +1,4 @@
+2020-12-21 12:35:31,594 [11] INFO  SourceControlFinalAssignment.Controllers.HomeController Entering the Home Controller. Login Method.
+2020-12-21 12:35:33,239 [10] INFO  SourceControlFinalAssignment.Controllers.HomeController Entering the Home Controller. Login Method.
+2020-12-21 12:35:34,101 [11] INFO  SourceControlFinalAssignment.Controllers.HomeController Login Success
+2020-12-21 12:35:34,101 [10] INFO  SourceControlFinalAssignment.Controllers.HomeController Login Success
