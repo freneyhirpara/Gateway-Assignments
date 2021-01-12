@@ -1,0 +1,145 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<ProductManagement.Core.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "ProductManager", FormMethod.Get))
+{
+
+
+
+    <b>Search Option: </b>@Html.RadioButton("option", "Name") <text>Name</text> @Html.RadioButton("option", "Category") <text> Category </text>
+
+
+
+        @Html.TextBox("search", null, new { maxlength = 100, size = 20 })
+        <input class="btn btn-primary" type="submit" name="submit" value="Search" />
+    }
+<br />
+
+@using (Html.BeginForm("DeleteSelected", "ProductManager", FormMethod.Post))
+
+{
+    <p>
+
+
+        <input type="submit" value="Delete Selected Products" onclick="return confirm('Are you sure you wish to delete selected Products?');" class="btn btn-danger" />
+
+    </p>
+
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+
+
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+            <th>
+                @Html.ActionLink("Name", "Index", new
+           {
+               sort = ViewBag.SortByName,
+
+               search = Request.QueryString["search"]
+           })
+            <th>
+                @Html.DisplayNameFor(model => model.First().Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Price)
+            </th>
+            <th>
+                @Html.ActionLink("Category", "Index", new { sort = ViewBag.SortByCategory })
+
+            </th>
+            
+
+            <th></th>
+        </tr>
+
+        @if (Model.Count() == 0)
+        {
+            <tr><td colspan="7" style="text-align:center;">Records not Found</td></tr>
+        }
+        else
+        {
+
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+
+                        <input type="checkbox" class="checkedBoxId " name="ids" value="@item.Id" />
+                    </td>
+                    <td>
+                        <img class="img-thumbnail" style="height:70px;" src="~/Content/ProductImages/@item.Image" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+                    
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+}
+@Html.PagedListPager(Model, pageNumber => Url.Action("Index", new
+{
+    pageNumber,
+    search = Request.QueryString["search"],
+    sort = Request.QueryString["sort"]
+}))
+
+@section scripts{
+    <script>
+        $(function () {
+            var deleteMessage = '@TempData["DeleteMessage"]'
+            if (deleteMessage != '') {
+                alertify.success(deleteMessage);
+            }
+
+            var createMessage = '@TempData["CreateMessage"]'
+            if (createMessage != '') {
+                alertify.success(createMessage);
+            }
+            var editMessage = '@TempData["EditMessage"]'
+            if (editMessage != '') {
+                alertify.success(editMessage);
+            }
+
+
+        });
+    </script>
+
+}
