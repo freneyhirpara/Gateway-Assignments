@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "3012b7d4-4c1a-49f5-91f2-4bad1330b899",
+		"name": "Hotel Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44391/api/Hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"HotelName\": \"Hotel Paradise\",\r\n        \"Address\": \"D/93, C.G road, Pune\",\r\n        \"City\": \"Pune\",\r\n        \"Pincode\": \"346205\",\r\n        \"ContactNumber\": \"7989675678\",\r\n        \"ContactPerson\": \"Phoebe\",\r\n        \"Website\": \"Paradise.com\",\r\n        \"Facebook\": \"https://www.facebook.com/HotelParadise\",\r\n        \"Twitter\": \"https://www.twitter.com/HotelParadise\",\r\n        \"IsActive\": \"True\",\r\n        \"CreatedDate\": \"2019-02-17T00:00:00\",\r\n        \"CreatedBy\": \"Phoebe\",\r\n        \"UpdatedDate\": \"2019-02-21T00:00:00\",\r\n        \"UpdatedBy\": \"Phoebe\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Hotel"
+					]
+				},
+				"description": "POST 5-10 hotels with details of hotel."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"HotelName\": \"Greenland Exotica\",\r\n        \"Address\": \"sector-9, Shivji road, Mumbai\",\r\n        \"City\": \"Mumbai\",\r\n        \"Pincode\": \"396209\",\r\n        \"ContactNumber\": \"7768988743\",\r\n        \"ContactPerson\": \"Monica\",\r\n        \"Website\": \"Greenland.com\",\r\n        \"Facebook\": \"https://www.facebook.com/GreenlandExotica\",\r\n        \"Twitter\": \"https://www.twitter.com/GreenlandExotica\",\r\n        \"IsActive\": \"True\",\r\n        \"CreatedDate\": \"2019-02-20T00:00:00\",\r\n        \"CreatedBy\": \"Monica\",\r\n        \"UpdatedDate\": \"2019-02-21T00:00:00\",\r\n        \"UpdatedBy\": \"Monica\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Hotel"
+					]
+				},
+				"description": " POST 5-10 hotels with details of hotel"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"HotelName\": \"Karnavati Kingdom\",\r\n        \"Address\": \"11, Gota road, Ahmedabad\",\r\n        \"City\": \"Ahmedabad\",\r\n        \"Pincode\": \"382350\",\r\n        \"ContactNumber\": \"8897654320\",\r\n        \"ContactPerson\": \"Rachel\",\r\n        \"Website\": \"KarnavatiKingdom.com\",\r\n        \"Facebook\": \"https://www.facebook.com/KarnavatiKingdom\",\r\n        \"Twitter\": \"https://www.twitter.com/KarnavatiKingdom\",\r\n        \"IsActive\": \"True\",\r\n        \"CreatedDate\": \"2017-05-20T00:00:00\",\r\n        \"CreatedBy\": \"Rachel\",\r\n        \"UpdatedDate\": \"2019-02-21T00:00:00\",\r\n        \"UpdatedBy\": \"Rachel\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Hotel"
+					]
+				},
+				"description": " POST 5-10 hotels with details of hotel."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 4,\r\n        \"RoomName\": \"Studio\",\r\n        \"RoomCategory\": \"Category3\",\r\n        \"RoomPrice\": 1900.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-09-01T00:00:00\",\r\n        \"CreatedBy\": \"Phoebe\",\r\n        \"UpdatedDate\": \"2020-09-02T00:00:00\",\r\n        \"UpdatedBy\": \"Phoebe\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Room",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Room"
+					]
+				},
+				"description": "POST 3-5 rooms in each hotel with different price and\r\ndifferent category."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 5,\r\n        \"RoomName\": \"Master\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 1600.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-09-09T00:00:00\",\r\n        \"CreatedBy\": \"Monica\",\r\n        \"UpdatedDate\": \"2020-09-09T00:00:00\",\r\n        \"UpdatedBy\": \"Monica\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Room",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Room"
+					]
+				},
+				"description": "3-5 rooms in each hotel with different price and\r\ndifferent category."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Hotel",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 7,\r\n        \"RoomName\": \"Double\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 3500.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-05-09T00:00:00\",\r\n        \"CreatedBy\": \"Ross\",\r\n        \"UpdatedDate\": \"2020-05-09T00:00:00\",\r\n        \"UpdatedBy\": \"Ross\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Hotel"
+					]
+				},
+				"description": "GET all hotels sort by alphabetic order. Response: List of hotels."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Room/382350/Ahmedabad/5000/Category3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 7,\r\n        \"RoomName\": \"Double\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 3500.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-05-09T00:00:00\",\r\n        \"CreatedBy\": \"Ross\",\r\n        \"UpdatedDate\": \"2020-05-09T00:00:00\",\r\n        \"UpdatedBy\": \"Ross\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Room/382350/Ahmedabad/5000/Category3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Room",
+						"382350",
+						"Ahmedabad",
+						"5000",
+						"Category3"
+					]
+				},
+				"description": "GET all rooms of hotels with optional parameter by hotel city, pin code, Price, Category. (Default\r\nsort by price of room low to high)\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Booking/1/2021-02-08",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 7,\r\n        \"RoomName\": \"Double\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 3500.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-05-09T00:00:00\",\r\n        \"CreatedBy\": \"Ross\",\r\n        \"UpdatedDate\": \"2020-05-09T00:00:00\",\r\n        \"UpdatedBy\": \"Ross\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Booking/1/2021-02-08",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Booking",
+						"1",
+						"2021-02-08"
+					]
+				},
+				"description": "GET availability of room on some particular date (parameter), Response: should be return True\r\nFalse only."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Booking/1/10-02-2021/Optional",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 7,\r\n        \"RoomName\": \"Double\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 3500.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-05-09T00:00:00\",\r\n        \"CreatedBy\": \"Ross\",\r\n        \"UpdatedDate\": \"2020-05-09T00:00:00\",\r\n        \"UpdatedBy\": \"Ross\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Booking/1/10-02-2021/Optional",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Booking",
+						"1",
+						"10-02-2021",
+						"Optional"
+					]
+				},
+				"description": "POST Booked the room of hotel for particular date with (optional status)."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Booking/PutDate/5/2021-02-02",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 7,\r\n        \"RoomName\": \"Double\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 3500.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-05-09T00:00:00\",\r\n        \"CreatedBy\": \"Ross\",\r\n        \"UpdatedDate\": \"2020-05-09T00:00:00\",\r\n        \"UpdatedBy\": \"Ross\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Booking/PutDate/5/2021-02-02",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Booking",
+						"PutDate",
+						"5",
+						"2021-02-02"
+					]
+				},
+				"description": "PUT update booking date for any room by Id."
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Booking/PutStatus/3/Cancelled",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 7,\r\n        \"RoomName\": \"Double\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 3500.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-05-09T00:00:00\",\r\n        \"CreatedBy\": \"Ross\",\r\n        \"UpdatedDate\": \"2020-05-09T00:00:00\",\r\n        \"UpdatedBy\": \"Ross\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Booking/PutStatus/3/Cancelled",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Booking",
+						"PutStatus",
+						"3",
+						"Cancelled"
+					]
+				},
+				"description": "PUT update booking status by booking Id (optional status to Definitive or Cancelled)"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44391/api/Booking/PutDelete/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"HotelId\": 7,\r\n        \"RoomName\": \"Double\",\r\n        \"RoomCategory\": \"Category2\",\r\n        \"RoomPrice\": 3500.0,\r\n        \"IsActive\": true,\r\n        \"CreatedDate\": \"2020-05-09T00:00:00\",\r\n        \"CreatedBy\": \"Ross\",\r\n        \"UpdatedDate\": \"2020-05-09T00:00:00\",\r\n        \"UpdatedBy\": \"Ross\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/Booking/PutDelete/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"Booking",
+						"PutDelete",
+						"2"
+					]
+				},
+				"description": "DELETE delete booking by booking Id (change status Deleted – soft delete)\r\n"
+			},
+			"response": []
+		}
+	]
+}

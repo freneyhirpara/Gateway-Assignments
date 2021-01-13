@@ -1,0 +1,16 @@
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\HMS.DAL.dll
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\HMS.DAL.pdb
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\HMS.Models.dll
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\HMS.Models.pdb
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\obj\Debug\HMS.DAL.csprojAssemblyReference.cache
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\obj\Debug\HMS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\obj\Debug\HMS.DAL.csproj.CopyComplete
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\obj\Debug\HMS.DAL.dll
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\obj\Debug\HMS.DAL.pdb
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\HMS.DAL.dll.config
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\AutoMapper.dll
+C:\Users\Gamers\source\repos\WebApiFinalProject\HMS.DAL\bin\Debug\AutoMapper.xml

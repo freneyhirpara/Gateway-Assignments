@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+    <title>Rooms</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <h2>Rooms</h2>
+        <table id="room" class="table table-bordered">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>ID</th>
+                    <th>Room Name</th>
+                    <th>Address</th>
+                    <th>Pincode</th>
+                    <th>ContactPerson</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>Search by ID</h2>
+
+        <input type="text" size="5" id="stuId" />
+        <input type="button" value="Search" onclick="find();" />
+
+        <p id="st"></p>
+    </div>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+
+
+        var uri = 'api/Room';
+        $(document).ready(function () {
+            $.ajax({
+                url: '/api/Room/',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $.each(data, function (key, item) {
+                        $('#room tbody').append("<tr><td>" + item.RoomId + "</td>" + "<td>" + item.RoomName + "</td>" + "<td>" + item.RoomPrice + "</td>" + "<td>" + item.RoomCategory  + "</td>" + "<td>" + item.IsActive + "</td></tr>");
+                    });
+                },
+                error: function (request, message, error) {
+                    handleException(request, message, error);
+                }
+            });
+            
+        });
+        
+
+        
+    </script>
+</body>
+</html>
