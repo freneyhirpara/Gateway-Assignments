@@ -9,7 +9,7 @@ const pool = new Pool({
 
 
 const getCars = (request, response) => {
-  pool.query('SELECT car.id, car.Name AS Car_Name, make.Name AS Make_Name, model.Name AS Model_Name FROM car JOIN make ON (car.makeid=make.id) JOIN model ON (car.modelid=model.id) ORDER BY car.id ASC;', (error, results) => {
+  pool.query('SELECT car.id, car.Name AS Car_Name, make.Name AS Make_Name, model.Name AS Model_Name FROM car LEFT JOIN make ON (car.makeid=make.id) LEFT JOIN model ON (car.modelid=model.id) ORDER BY car.id ASC;', (error, results) => {
     if (error) {
       throw error
     }
@@ -21,7 +21,7 @@ const getCars = (request, response) => {
 const getCarById = (request, response) => {
   const id = parseInt(request.params.id)
 
-  pool.query('SELECT car.id, car.Name AS Car_Name, make.Name AS Make_Name, model.Name AS Model_Name FROM car JOIN make ON (car.makeid=make.id) JOIN model ON (car.modelid=model.id) WHERE car.id = $1', [id], (error, results) => {
+  pool.query('SELECT car.id, car.Name AS Car_Name, make.Name AS Make_Name, model.Name AS Model_Name FROM car LEFT JOIN make ON (car.makeid=make.id) LEFT JOIN model ON (car.modelid=model.id) WHERE car.id = $1', [id], (error, results) => {
     if (error) {
       throw error
     }
