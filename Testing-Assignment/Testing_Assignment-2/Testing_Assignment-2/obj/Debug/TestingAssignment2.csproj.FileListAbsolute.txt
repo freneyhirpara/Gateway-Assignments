@@ -1,0 +1,7 @@
+C:\Users\Gamers\Desktop\Gateway Assignment\gt\Testing-Assignment\Testing_Assignment-2\Testing_Assignment-2\bin\Debug\TestingAssignment2.exe.config
+C:\Users\Gamers\Desktop\Gateway Assignment\gt\Testing-Assignment\Testing_Assignment-2\Testing_Assignment-2\bin\Debug\TestingAssignment2.exe
+C:\Users\Gamers\Desktop\Gateway Assignment\gt\Testing-Assignment\Testing_Assignment-2\Testing_Assignment-2\bin\Debug\TestingAssignment2.pdb
+C:\Users\Gamers\Desktop\Gateway Assignment\gt\Testing-Assignment\Testing_Assignment-2\Testing_Assignment-2\obj\Debug\TestingAssignment2.csprojAssemblyReference.cache
+C:\Users\Gamers\Desktop\Gateway Assignment\gt\Testing-Assignment\Testing_Assignment-2\Testing_Assignment-2\obj\Debug\TestingAssignment2.csproj.CoreCompileInputs.cache
+C:\Users\Gamers\Desktop\Gateway Assignment\gt\Testing-Assignment\Testing_Assignment-2\Testing_Assignment-2\obj\Debug\TestingAssignment2.exe
+C:\Users\Gamers\Desktop\Gateway Assignment\gt\Testing-Assignment\Testing_Assignment-2\Testing_Assignment-2\obj\Debug\TestingAssignment2.pdb
