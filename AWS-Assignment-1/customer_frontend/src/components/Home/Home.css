@@ -1,0 +1,33 @@
+.table{
+    width:max-content;
+    
+}
+.thead{
+    background-color: darkslategrey;
+    color: white;
+}
+.fa:hover{
+    color:darkslategrey;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index:2;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
