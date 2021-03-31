@@ -7,37 +7,40 @@ using System.Threading.Tasks;
 
 namespace TestingAssignment2
 {
-    public class ExtensionMethods
+    public static class ExtensionMethods
     {
-            public static string StringConvert(string inputString, string op)
+            public static string Conversion(this string input, string output)
             {
                 string outputString = "";
                 int asciiValue = 0;
-                if (op.Equals("UpperToLower"))
+
+                if (output.Equals("UpperToLower"))
                 {
-                    foreach (var ch in inputString)
+                    foreach (var ch in input)
                     {
                         asciiValue = (int)ch;
+
                         if (asciiValue >= 65 && asciiValue <= 90)
                             asciiValue = asciiValue + 32;
                         else if (asciiValue >= 97 && asciiValue <= 122)
                             asciiValue = asciiValue - 32;
                         outputString += (char)asciiValue;
                     }
+
                     return outputString;
                 }
-                else if (op.Equals("TitleCase") || op.Equals("Capitalized"))
+                else if (output.Equals("TitleCase") || output.Equals("Capitalized"))
                 {
                     TextInfo text = new CultureInfo("en-us", false).TextInfo;
-                    return text.ToTitleCase(inputString);
+                    return text.ToTitleCase(input);
                 }
 
-                else if (op.Equals("CheckLowerCase"))
+                else if (output.Equals("CheckLowerCase"))
                 {
-                    foreach (var item in inputString)
+                bool status = false;
+                foreach (var item in input)
                     {
                         asciiValue = (int)item;
-                        bool status = false;
                         if (asciiValue >= 97 && asciiValue <= 122)
                         {
                             status = true;
@@ -45,19 +48,25 @@ namespace TestingAssignment2
                         else
                         {
                             status = false;
+                            break;
                         }
-                        if (status)
-                        {
-                            return "lowerCase";
-                        }
+                        
+                    }
+                    if (status == true)
+                    {
+                        return "true";
+                    }
+                    else
+                    {
+                        return "false";
                     }
                 }
-                else if (op.Equals("CheckUpperCase"))
+                else if (output.Equals("CheckUpperCase"))
                 {
-                    foreach (var item in inputString)
+                bool status = false;
+                foreach (var item in input)
                     {
                         asciiValue = (int)item;
-                        bool status = false;
                         if (asciiValue >= 65 && asciiValue <= 90)
                         {
                             status = true;
@@ -65,18 +74,25 @@ namespace TestingAssignment2
                         else
                         {
                             status = false;
+                            break;
                         }
-                        if (status)
-                        {
-                            return "uppercase";
-                        }
+                       
                     }
-                }
-                else if (op.Equals("CheckforInt"))
+                    if (status == true)
+                    {
+                        return "true";
+                    }
+                    else
+                    {
+                        return "false";
+                    }
+
+            }
+                else if (output.Equals("CheckforInt"))
                 {
                     try
                     {
-                        int x = int.Parse(inputString);
+                        int x = int.Parse(input);
                         return "true";
                     }
                     catch (Exception)
@@ -85,19 +101,28 @@ namespace TestingAssignment2
                         return "false";
                     }
                 }
-                else if (op.Equals("RemoveLastCharacter"))
+                else if (output.Equals("RemoveLastCharacter"))
                 {
-                    return inputString.Substring(0,inputString.Length - 1);
+                    return input.Substring(0,input.Length - 1);
                 }
-                else if (op.Equals("WordCount"))
+                else if (output.Equals("WordCount"))
                 {
-                    return "" + inputString.Count();
+
+                    var count = 0;
+
+                    for (var i = 0; i < input.Length; i++)
+                    {
+                        if (input[i] == ' ' || i == input.Length - 1)
+                            count++;
+                    }
+                    
+                    return count.ToString();
                 }
-                else if (op.Equals("StringToInt"))
+                else if (output.Equals("StringToInt"))
                 {
                     try
                     {
-                        return "" + int.Parse(inputString);
+                        return "" + int.Parse(input);
                     }
                     catch (Exception)
                     {

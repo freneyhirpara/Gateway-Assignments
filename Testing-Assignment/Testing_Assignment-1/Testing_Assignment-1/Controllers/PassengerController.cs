@@ -42,7 +42,7 @@ namespace Testing_Assignment_1.Controllers
             return _dataRepository.Update(passenger);
         }
 
-        // DELETE: api/User/5
+        // DELETE: api/User/12
         public bool Delete(Guid id)
         {
             var obj = _dataRepository.Delete(id);

@@ -58,6 +58,7 @@ namespace Passenger.Test
         {
             // Arrange
             var passenger = new Testing_Assignment_1.Models.Passenger();
+
             passenger.Id = new Guid();
             passenger.FirstName = "Freney";
             passenger.LastName = "Hirpara";
@@ -67,6 +68,7 @@ namespace Passenger.Test
             var responseObj = mockDataRepository.Setup(x => x.GetById(passenger.Id)).Returns(passenger);
             var result = _passengerController.Get(passenger.Id);
             var isNull = Assert.IsType<OkNegotiatedContentResult<Testing_Assignment_1.Models.Passenger>>(result);
+
             // Assert
             Assert.NotNull(isNull);
         }
@@ -76,10 +78,12 @@ namespace Passenger.Test
         {
             // Arrange
             var passenger = new Testing_Assignment_1.Models.Passenger();
+
             passenger.Id = new Guid();
             passenger.FirstName = "Freney";
             passenger.LastName = "Patel";
             passenger.PhoneNumber = "9879876789";
+
             // Act
             var response = mockDataRepository.Setup(x => x.AddPassenger(passenger)).Returns(AddPassenger());
             var result = _passengerController.Post(passenger);
@@ -97,6 +101,7 @@ namespace Passenger.Test
             // Act
             var resultObject = mockDataRepository.Setup(x => x.Update(model)).Returns(model);
             var response = _passengerController.Put(model);
+
             // Assert
             Assert.Equal(model, response);
         }
@@ -106,6 +111,7 @@ namespace Passenger.Test
             Guid id1 = new Guid();
             Guid id2 = new Guid();
             Guid id3 = new Guid();
+
             IList<Testing_Assignment_1.Models.Passenger> passengersList = new List<Testing_Assignment_1.Models.Passenger>()
             {                
                 new Testing_Assignment_1.Models.Passenger() {Id = id1, FirstName = "Freney", LastName = "Hirpara" ,PhoneNumber = "9879879876"},
@@ -119,10 +125,12 @@ namespace Passenger.Test
         private static Testing_Assignment_1.Models.Passenger AddPassenger()
         {
             var passenger = new Testing_Assignment_1.Models.Passenger();
+
             passenger.Id = new Guid();
             passenger.FirstName = "Freney";
             passenger.LastName = "Hirpara";
             passenger.PhoneNumber = "9879876789";
+
             return passenger;
         }
     }
