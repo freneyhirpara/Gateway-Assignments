@@ -61,16 +61,13 @@ exports.handler = async (event, context, callback) => {
         const checkEmail = `Select * from customers where email = '${username}'`;
         await con.query(checkEmail)
             .then(async data => {
-                console.log(data);
                 if(data.rowCount==0){
                     
                      await s3.putObject(params).promise();
                      await s3.putObject(thumbnailParams).promise();
                     const query = `INSERT INTO customers (name,email,password,contactnumber,image,thumbnail,status) VALUES ('${name}','${username}','${hash}','${contactnumber}','${fileName}','${thumbnailName}',true) RETURNING id,name,image`;
-                    console.log(query)
                     await con.query(query)
                     .then(dataa => {
-                        console.log(dataa);
                         callback(null,{
                             statusCode: 200,
                             headers: {
