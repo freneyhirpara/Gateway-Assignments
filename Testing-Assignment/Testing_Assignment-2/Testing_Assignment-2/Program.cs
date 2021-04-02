@@ -14,39 +14,48 @@ namespace TestingAssignment2
             string outputValue;
 
             //Case 1 : convert the given input string to uppercase
-            outputValue = ExtensionMethods.Conversion(input, "UpperToLower");
+            
+            outputValue = input.Conversion("UpperToLower");
             Console.WriteLine("UpperToLower : " + outputValue);
 
             //Case 2 : convert the given input string to titlecase
-            outputValue = ExtensionMethods.Conversion(input, "TitleCase");
+            
+            outputValue = input.Conversion("TitleCase");
             Console.WriteLine("TitleCase : " + outputValue);
 
             //Case 3 : convert the given input string to capitalized
-            outputValue = ExtensionMethods.Conversion(input, "Capitalized");
+            
+            outputValue = input.Conversion( "Capitalized");
             Console.WriteLine("Capitalized : " + outputValue);
 
             //Case 4 : check the given input string is in lowercase or not
-            outputValue = ExtensionMethods.Conversion(input, "CheckLowerCase");
+            
+            outputValue = input.Conversion( "CheckLowerCase");
             Console.WriteLine("CheckLowerCase : " + outputValue);
 
             //Case 5 : check the given input string is in uppercase or not
-            outputValue = ExtensionMethods.Conversion(input, "CheckUpperCase");
+            
+            outputValue = input.Conversion("CheckUpperCase");
             Console.WriteLine("CheckUpperCase : " + outputValue);
 
             //Case 6 : check the given input string is int or not
-            outputValue = ExtensionMethods.Conversion(input, "CheckforInt");
+            
+            outputValue = input.Conversion("CheckforInt");
             Console.WriteLine("CheckforInt : " + outputValue);
 
             //Case 7 : remove last character from the given input string
-            outputValue = ExtensionMethods.Conversion(input, "RemoveLastCharacter");
+            
+            outputValue = input.Conversion("RemoveLastCharacter");
             Console.WriteLine("RemoveLastCharacter : " + outputValue);
 
             //Case 8 : count the number of words in the given input string
-            outputValue = ExtensionMethods.Conversion(input, "WordCount");
+            
+            outputValue = input.Conversion( "WordCount");
             Console.WriteLine("WordCount : " + outputValue);
 
             //Case 9 convert the given input string to int type
-            outputValue = ExtensionMethods.Conversion(input, "StringToInt");
+            
+            outputValue = input.Conversion( "StringToInt");
             Console.WriteLine("StringToInt : " + outputValue);
             Console.ReadLine();
         }
