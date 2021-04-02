@@ -55,7 +55,7 @@ namespace UnitTestProject
         {
             //Arrange
             inputString = "hello world";
-            expectedString = "lowerCase";
+            expectedString = "true";
 
             //Act
             string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "CheckLowerCase");
@@ -69,7 +69,7 @@ namespace UnitTestProject
         {
             //Arrange
             inputString = "HELLO WORLD";
-            expectedString = "uppercase";
+            expectedString = "true";
 
             //Act
             string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "CheckUpperCase");
