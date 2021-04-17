@@ -1,4 +1,5 @@
 using System;
+using TestingAssignment2;
 using Xunit;
 
 namespace UnitTestProject
@@ -16,10 +17,10 @@ namespace UnitTestProject
             expectedString = "hELLO wORLD";
 
             // Act
-            string outputString = inputString.UpperToLower();
+            string outputString = inputString.UppertoLower();
 
             // Assert
-            Assert.Equal(expectedString ,outputString);
+            Assert.Equal(expectedString, outputString);
         }
 
         [Fact]
@@ -100,7 +101,7 @@ namespace UnitTestProject
             expectedString = "Hello Worl";
 
             // Act
-            string outputString = inputString.RemoveLastCharacter();
+            string outputString = inputString.RemoveLastChar();
 
             // Assert
             Assert.Equal(expectedString, outputString);
