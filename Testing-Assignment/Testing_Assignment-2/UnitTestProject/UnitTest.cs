@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit;
 
 namespace UnitTestProject
@@ -11,112 +11,112 @@ namespace UnitTestProject
         [Fact]
         public void UpperToLower()
         {
-            //Arrange
+            // Arrange
             inputString = "Hello World";
             expectedString = "hELLO wORLD";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "UpperToLower");
+            // Act
+            string outputString = inputString.UpperToLower();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString ,outputString);
         }
 
         [Fact]
         public void TitleCase()
         {
-            //Arrange
+            // Arrange
             inputString = "hello WORLD";
             expectedString = "Hello World";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "TitleCase");
+            // Act
+            string outputString = inputString.TitleCase();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
 
         [Fact]
         public void Capitalized()
         {
-            //Arrange
+            // Arrange
             inputString = "hello world";
             expectedString = "Hello World";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "Capitalized");
+            // Act
+            string outputString = inputString.Capitalized();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
 
         [Fact]
         public void CheckLowerCase()
         {
-            //Arrange
+            // Arrange
             inputString = "hello world";
             expectedString = "true";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "CheckLowerCase");
+            // Act
+            string outputString = inputString.CheckLowerCase();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
 
         [Fact]
         public void CheckUpperCase()
         {
-            //Arrange
+            // Arrange
             inputString = "HELLO WORLD";
             expectedString = "true";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "CheckUpperCase");
+            // Act
+            string outputString = inputString.CheckUpperCase();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
 
         [Fact]
         public void CheckforInt()
         {
-            //Arrange
+            // Arrange
             inputString = "111";
             expectedString = "true";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "CheckforInt");
+            // Act
+            string outputString = inputString.CheckforInt();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
 
         [Fact]
         public void RemoveLastCharacter()
         {
-            //Arrange
+            // Arrange
             inputString = "Hello World";
             expectedString = "Hello Worl";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "RemoveLastCharacter");
+            // Act
+            string outputString = inputString.RemoveLastCharacter();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
 
         [Fact]
         public void WordCount()
         {
-            //Arrange
+            // Arrange
             inputString = "Hello World";
             expectedString = "11";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "WordCount");
+            // Act
+            string outputString = inputString.WordCount();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
 
@@ -124,14 +124,14 @@ namespace UnitTestProject
         [Fact]
         public void StringToInt()
         {
-            //Arrange
+            // Arrange
             inputString = "111";
             expectedString = "111";
 
-            //Act
-            string outputString = TestingAssignment2.ExtensionMethods.Conversion(inputString, "StringToInt");
+            // Act
+            string outputString = inputString.StringToInt();
 
-            //Assert
+            // Assert
             Assert.Equal(expectedString, outputString);
         }
     }
