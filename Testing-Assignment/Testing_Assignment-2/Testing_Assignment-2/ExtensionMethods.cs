@@ -9,22 +9,30 @@ namespace TestingAssignment2
 {
     public static class ExtensionMethods
     {
-            public static string UppertoLower(this string inputString)
+        public static string UppertoLower(this string inputString)
+        {
+            string output = "";
+            int ascii = 0;
+            foreach (var ch in inputString)
             {
-                string output = "";
-                int ascii = 0;
-                foreach (var ch in inputString)
-                {
-                    ascii = (int)ch;
-                    if (ascii >= 65 && ascii <= 90)
-                        ascii += 32;
-                    else if (ascii >= 97 && ascii <= 122)
-                        ascii -= 32;
-                    output += (char)ascii;
-                }
-                return output;
+                ascii = (int)ch;
+                if (ascii >= 65 && ascii <= 90)
+                    ascii += 32;
+                else if (ascii >= 97 && ascii <= 122)
+                    ascii -= 32;
+                output += (char)ascii;
             }
+            return output;
+        }
+    
+
         public static string TitleCase(this string inputString)
+        {
+            TextInfo textInfo = new CultureInfo("en-us", false).TextInfo;
+            return textInfo.ToTitleCase(inputString);
+        }
+
+        public static string Capitalized(this string inputString)
         {
             TextInfo textInfo = new CultureInfo("en-us", false).TextInfo;
             return textInfo.ToTitleCase(inputString);
@@ -57,6 +65,7 @@ namespace TestingAssignment2
                 return "false";
             }
         }
+
         public static string CheckUpperCase(this string inputString)
         {
 
@@ -85,6 +94,7 @@ namespace TestingAssignment2
                 return "false";
             }
         }
+
         public static string CheckforInt(this string inputString)
         {
             try
@@ -98,6 +108,7 @@ namespace TestingAssignment2
                 return "Failed";
             }
         }
+
         public static string RemoveLastChar(this string inputString)
         {
             return inputString.Substring(0, inputString.Length - 1);
@@ -111,6 +122,7 @@ namespace TestingAssignment2
                     wordCount++;
             return wordCount.ToString();
         }
+
         public static string StringToInt(this string inputString)
         {
             try
@@ -124,4 +136,4 @@ namespace TestingAssignment2
             }
         }
     }
-    }
+}
