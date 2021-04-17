@@ -27,8 +27,8 @@ namespace UnitTestProject
         public void TitleCase()
         {
             // Arrange
-            inputString = "hello WORLD";
-            expectedString = "Hello World";
+            inputString = "hello";
+            expectedString = "Hello";
 
             // Act
             string outputString = inputString.TitleCase();
@@ -52,10 +52,10 @@ namespace UnitTestProject
         }
 
         [Fact]
-        public void CheckLowerCase()
+        public void CheckLowerCaseSuccess()
         {
             // Arrange
-            inputString = "hello world";
+            inputString = "hello";
             expectedString = "true";
 
             // Act
@@ -66,10 +66,24 @@ namespace UnitTestProject
         }
 
         [Fact]
-        public void CheckUpperCase()
+        public void CheckLowerCaseFail()
         {
             // Arrange
-            inputString = "HELLO WORLD";
+            inputString = "hELLO";
+            expectedString = "false";
+
+            // Act
+            string outputString = inputString.CheckLowerCase();
+
+            // Assert
+            Assert.Equal(expectedString, outputString);
+        }
+
+        [Fact]
+        public void CheckUpperCaseSuccess()
+        {
+            // Arrange
+            inputString = "HELLO";
             expectedString = "true";
 
             // Act
@@ -80,11 +94,25 @@ namespace UnitTestProject
         }
 
         [Fact]
-        public void CheckforInt()
+        public void CheckUpperCaseFail()
+        {
+            // Arrange
+            inputString = "Hello";
+            expectedString = "false";
+
+            // Act
+            string outputString = inputString.CheckUpperCase();
+
+            // Assert
+            Assert.Equal(expectedString, outputString);
+        }
+
+        [Fact]
+        public void CheckforIntSuccess()
         {
             // Arrange
             inputString = "111";
-            expectedString = "true";
+            expectedString = "Success";
 
             // Act
             string outputString = inputString.CheckforInt();
@@ -94,7 +122,21 @@ namespace UnitTestProject
         }
 
         [Fact]
-        public void RemoveLastCharacter()
+        public void CheckforIntFail()
+        {
+            // Arrange
+            inputString = "hello";
+            expectedString = "Failed";
+
+            // Act
+            string outputString = inputString.CheckforInt();
+
+            // Assert
+            Assert.Equal(expectedString, outputString);
+        }
+
+        [Fact]
+        public void RemoveLastChar()
         {
             // Arrange
             inputString = "Hello World";
@@ -112,7 +154,7 @@ namespace UnitTestProject
         {
             // Arrange
             inputString = "Hello World";
-            expectedString = "11";
+            expectedString = "2";
 
             // Act
             string outputString = inputString.WordCount();
